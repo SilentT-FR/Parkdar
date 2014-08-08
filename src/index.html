@@ -4,8 +4,10 @@
 <title>Parkdar</title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" ></meta>
 <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+<link rel="stylesheet" href="http://labs.easyblog.it/maps/leaflet-search/src/leaflet-search.css" />
 <script type="text/javascript" src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-<style type="text/css">
+<script type="text/javascript" src="http://labs.easyblog.it/maps/leaflet-search/src/leaflet-search.js"></script>
+ <style type="text/css">
  body,h3,h4,h5,h6 {
 	padding: 0;
 	margin: 0;
@@ -29,6 +31,18 @@
 			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://www.mapquest.com/">Mapquest</a>',
 			id: 'examples.map-i86knfo3'
 		}).addTo(map);
+
+	map.addControl( new L.Control.Search({
+			url: 'http://nominatim.openstreetmap.org/search?format=json&q={s}',
+			jsonpParam: 'json_callback',
+			propertyName: 'display_name',
+			propertyLoc: ['lat','lon'],
+			markerLocation: false,
+			autoType: false,
+			autoCollapse: true,
+			minLength: 2,
+			zoom:12
+		}) );
 		
 		</script>
 </body>
