@@ -2,15 +2,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>Parkdar</title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" ></meta>
-<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"></meta>
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"></link>
 <script type="text/javascript" src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 
-<link rel="stylesheet" href="http://labs.easyblog.it/maps/leaflet-search/src/leaflet-search.css" />
+<link rel="stylesheet" href="http://labs.easyblog.it/maps/leaflet-search/src/leaflet-search.css"></link>
 <script type="text/javascript" src="http://labs.easyblog.it/maps/leaflet-search/src/leaflet-search.js"></script>
 
-<link rel="stylesheet" href="http://leaflet.github.io/Leaflet.markercluster/dist/MarkerCluster.css">
-<link rel="stylesheet" href="http://leaflet.github.io/Leaflet.markercluster/dist/MarkerCluster.Default.css">
+<link rel="stylesheet" href="http://leaflet.github.io/Leaflet.markercluster/dist/MarkerCluster.css"></link>
+<link rel="stylesheet" href="http://leaflet.github.io/Leaflet.markercluster/dist/MarkerCluster.Default.css"></link>
 <script type="text/javascript" src="http://leaflet.github.io/Leaflet.markercluster/dist/leaflet.markercluster-src.js"></script>
 
 
@@ -32,7 +32,10 @@
 </head>
 <body>
 <div id="map"></div>
-<script type="text/javascript"> var map = L.map('map').setView([46.702,2.000], 6);
+<script type="text/javascript"> 
+		// <![CDATA[
+
+		var map = L.map('map').setView([46.702,2.000], 6);
 
 		L.tileLayer('http://otile2.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png', {
 			maxZoom: 18,
@@ -53,7 +56,7 @@
 			minLength: 2,
 			zoom:12
 		}) );
-
+		//]]>
 		
 		</script>
 </body>
